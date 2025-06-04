@@ -11,12 +11,12 @@ const message = `${text} ${timeStamp} \n`;
 
 if(!message){
   console.log("❌ Please give message to log");
-  console.log("Example: 13-5-logger-app-path-module.js Hello world");
+  console.log("Example: node index.js Hello world");
   process.exit(1);
 }
 
-const filePath = path.join(__dirname,"mylog.txt");
+const filePath = path.join(__dirname,"log.txt");
 
 fs.appendFile(filePath, message, {encoding: "utf-8"}, ()=>{
-  console.log("Your log has been added successfully")
+  console.log("Your message has been added to your log successfully")
 })
